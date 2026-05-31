@@ -1,6 +1,6 @@
 import random, discord
 from discord.ext import commands
-uni_list = ["meow", "mewo", "mrrow", "purr"]
+uni_list = ["meow", "mewo", "mrrow", "purr", "uni", "kitty", "cat", "moew"]
 reply_list = ["mrrow~ :3", "\*rolls over*"]
 reaction_list = ["🐱","😹","😽","😾","🙀","😸","😺","😼","😿","🐈","🐈‍⬛"]
 async def setup(bot: commands.Bot) -> None:
@@ -22,6 +22,7 @@ class Uni(commands.Cog):
             responded = True
         if not any(uni in msg.lower() for uni in uni_list):
             return
-        await message.add_reaction(random.choice(reaction_list))
+        if not responded:
+            await message.add_reaction(random.choice(reaction_list))
         if random.randint(1,100) == 100 and not responded:
             await message.reply(random.choice(reply_list))
