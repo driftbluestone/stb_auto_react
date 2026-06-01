@@ -1,6 +1,6 @@
 import random, discord
 from discord.ext import commands
-uni_list = ["meow", "mewo", "mrrow", "purr", "uni", "kitty", "cat", "moew"]
+uni_list = ["meow", "mewo", "mrrow", "purr", "uni", "kitty", "cat", "moew", "nya"]
 reply_list = ["mrrow~ :3", "\*rolls over*"]
 reaction_list = ["🐱","😹","😽","😾","🙀","😸","😺","😼","😿","🐈","🐈‍⬛"]
 async def setup(bot: commands.Bot) -> None:
